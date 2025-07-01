@@ -1,0 +1,112 @@
+"use client";
+import { navLinks, socialMedia } from "../constants";
+import { useState } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { menu, close } from "@/assets";
+import { div, p } from "framer-motion/client";
+import { link } from "fs";
+import Link from "next/link";
+
+const Navbar = () => {
+  const [toggle, setToggle] = useState(false);
+
+  return (
+    <nav className="w-full flex py-4 justify-between">
+      <div className="flex items-center justify-between">
+        <div className="relative h-10 w-10 mr-2 rounded-full overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary to-tertiary animate-spin-slow [mask-image:linear-gradient(transparent, white)]">
+            <div className="absolute inset-[2px] bg-background rounded-full flex items-center justify-center">
+              <span className="font-serif font-bold bg-gradient-to-r from-primary to-tertiary bg-clip-text text-transparent">
+                EM
+              </span>
+            </div>
+          </div>
+        </div>
+        <span className="font-serif text-lg text-dimWhite hover:text-primary xm:hidden  sm:hidden md:block lg:flex">
+          Ernesto Mandlate
+        </span>
+      </div>
+
+      <div>
+        <ul className="list-none sm:hidden items-center bg-slate-600 px-6 py-3 rounded-full border-white/5 xm:hidden  lg:flex">
+          {navLinks.map((nav, index) => (
+            <motion.li
+              whileHover={{ scale: 1.05 }}
+              key={nav.id}
+              className={`font-serif  text-lg ${
+                index === navLinks.length - 1 ? "mr-0" : "mr-8"
+              } text-dimWhite hover:text-primary`}
+            >
+              <a href={`#${nav.id}`}>{nav.title}</a>
+            </motion.li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="hidden h-6 w-px bg-white/20 mx-2 md:hidden lg:flex"></div>
+
+      {/*SOCIALMEDIA */}
+      <div className="sm:hidden flex-row items-center xm:hidden lg:flex">
+        {socialMedia.map((social, index) => (
+          <Link href={social.link} key={social.id} target={"_blank"}>
+            <Image
+              src={social.icon}
+              alt={social.link}
+              className={`w-[21px] h-[21px] object-contain cursor-pointer rounded-sm hover:scale-110 ${
+                index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
+              }`}
+            />
+          </Link>
+        ))}
+      </div>
+
+      {/*MOBILE*/}
+      <div className="flex flex-1 justify-end items-center   lg:hidden">
+        <Image
+          src={toggle ? close : menu}
+          alt="menu"
+          className="W-[28px] h-[28px] cursor-pointer object-contain"
+          onClick={() => setToggle((prev) => !prev)}
+        />
+
+        <div
+          className={`${
+            toggle ? "flex" : "hidden"
+          } flex-col items-center gap-3 p-6 bg-gray-950/30 absolute top-16 right-0 mx-1 my-3 min-w-[150px] rounded-xl`}
+        >
+          <ul className="list-none flex flex-col justify-end items-center flex-1">
+            {navLinks.map((nav, index) => (
+              <motion.li
+                whileHover={{ scale: 1.05 }}
+                key={nav.id}
+                className={`font-serif text-base ${
+                  index === navLinks.length - 1 ? "mr-0" : "mb-4"
+                } text-white hover:text-primary`}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </motion.li>
+            ))}
+          </ul>
+
+          {/*SOCIALMEDIA */}
+          <div className="sm:flex flex-row items-center ">
+            {socialMedia.map((social, index) => (
+              <Link href={social.link} key={social.id} target={"_blank"}>
+                <Image
+                  src={social.icon}
+                  alt={social.link}
+                  className={`w-[21px] h-[21px] object-contain cursor-pointer rounded-sm hover:scale-110 ${
+                    index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
+                  }`}
+                />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
