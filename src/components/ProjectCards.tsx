@@ -7,8 +7,9 @@ import { projectDate } from "../constants";
 import { react, next, ts, tailwind, arrowUp } from "@/assets";
 import Link from "next/link";
 
-const ProjectCards = ({ description, title, img, link }) => (
+const ProjectCards = ({ description, title, img, on }) => (
   <section className=" flex py-2 md:px-2 lg:px-2">
+
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +60,7 @@ const ProjectCards = ({ description, title, img, link }) => (
 
         <div className="mx-4 py-3">
           <Link
-            href={link}
+            href={on}
             target={"_blank"}
             className="flex gap-16 font-roboto text-base text-[9px] text-dimWhite"
           >
@@ -68,7 +69,7 @@ const ProjectCards = ({ description, title, img, link }) => (
               transition={{ duration: 0.2 }}
               className="h-[250px] relative flex flex-row gap-8"
             >
-              {link}
+              {on}
               <div>
                 <Image src={arrowUp} alt="arrowup" />
               </div>
