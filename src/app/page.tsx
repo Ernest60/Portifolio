@@ -7,7 +7,7 @@ import {
   Abaut,
   Skills,
   Projects,
-  Contact,
+  //Contact,
   Footer,
 } from "../componets";
 
@@ -41,7 +41,7 @@ const page = () => (
 
       <div className={`bg-black ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          <Hero /> <Abaut /> <Skills /> <Projects /> <Contact />
+          <Hero /> <Abaut /> <Skills /> <Projects />
         </div>
       </div>
 
