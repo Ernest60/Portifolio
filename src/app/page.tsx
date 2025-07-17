@@ -1,12 +1,12 @@
 "use client";
-
 import styles from "../app/style";
 
 import {
   Navbar,
   Hero,
   Abaut,
-  //Skills,
+  Skills,
+  Projects,
   Contact,
   Footer,
 } from "../componets";
@@ -41,7 +41,7 @@ const page = () => (
 
       <div className={`bg-black ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          <Hero /> <Abaut />  <Contact />
+          <Hero /> <Abaut /> <Skills /> <Projects /> <Contact />
         </div>
       </div>
 
