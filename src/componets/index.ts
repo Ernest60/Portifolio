@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Abaut from "./Abaut";
-import Projects from "./Projects ";
+//import Projects from "./Projects ";
 import ProjectCards from "./ProjectCards";
 //import Skills from "./Skills";
 import Contact from "./Contact";
@@ -12,7 +12,7 @@ export {
   Navbar,
   Hero,
   Abaut,
-  Projects,
+ // Projects,
   ProjectCards,
   //Skills,
   Contact,

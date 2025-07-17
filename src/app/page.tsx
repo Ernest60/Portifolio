@@ -1,5 +1,5 @@
 "use client";
-import Projects from "@/componets/Projects ";
+
 import styles from "../app/style";
 
 import {
@@ -41,7 +41,7 @@ const page = () => (
 
       <div className={`bg-black ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          <Hero /> <Abaut /> <Projects /> <Contact />
+          <Hero /> <Abaut />  <Contact />
         </div>
       </div>
 
