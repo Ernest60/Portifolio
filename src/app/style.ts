@@ -2,7 +2,7 @@ const style = {
   boxWidth: "lg:max-w-[1280px] w-full",
 
   heading:
-    "font-serif sm:text-[48px] text-[40px] text-dimWhite sm:leading-[76.8px] leading-[60.8px] w-full",
+    "font-Cardo sm:text-[48px] text-[40px] text-dimWhite sm:leading-[76.8px] leading-[60.8px] w-full",
   paragraph:
     "font-PT_Serif text-base text-dimWhite text-[17px] leading-[30.8px]",
 

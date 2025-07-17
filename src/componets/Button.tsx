@@ -7,7 +7,7 @@ const Button = () => {
       <a
         href="#form"
         id="skills"
-        className="font-serif  text-center text-base font-medium px-14 py-3 w-[450px] md:w-fit lg:w-[350px]  rounded-xl bg-gradient-to-r from-blue-700 via-purple-500 to-red-700 text-dimWhite"
+        className="font-serif text-center text-base font-medium px-14 py-3 w-[450px] md:w-fit lg:w-[350px] rounded-xl bg-gradient-to-r from-blue-700 via-purple-500 to-red-700 text-dimWhite"
       >
         Connect with me
       </a>
@@ -15,7 +15,7 @@ const Button = () => {
       <Link
         href="/Cv-ernesto.pdf"
         target={"_blank"}
-        className="font-serif text-center text-base font-medium px-14 py-3 w-[450px] md:w-fit  lg:w-[350px]  rounded-xl hover:bg-slate-800 border text-dimWhite"
+        className="font-serif text-center text-base font-medium px-14 py-3 w-[450px] md:w-fit lg:w-[350px] rounded-xl hover:bg-slate-800 border text-dimWhite"
       >
         My resume
       </Link>

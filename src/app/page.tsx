@@ -5,11 +5,10 @@ import {
   Navbar,
   Hero,
   Abaut,
-  //Footer,
-  // Abaut,
-  // Projects,
-  // Skills,
-  // Contact,
+  Skills,
+  Projects,
+  Contact,
+  Footer,
 } from "../componets";
 
 import AOS from "aos";
@@ -42,12 +41,14 @@ const page = () => (
 
       <div className={`bg-black ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          <Hero /> <Abaut />
+          <Hero /> <Abaut /> <Skills /> <Projects /> <Contact />
         </div>
       </div>
 
       <div className={`bg-gray-950 ${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}></div>
+        <div className={`${styles.boxWidth}`}>
+          <Footer />
+        </div>
       </div>
     </div>
   )

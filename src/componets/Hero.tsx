@@ -9,18 +9,18 @@ import { motion } from "motion/react";
 const Hero = () => (
   <section
     id="home"
-    className={`${(style.paddingY, style.paddingX)}   pt-30 flex items-center gap-10`}
+    className={`${(style.paddingY, style.paddingX)} pt-30 flex items-center gap-10`}
   >
     <div
       data-aos="fade-right"
-      className={`${style.flexStart} flex-col lg:px-0 sm:px-16  px-4 gap-4 h-[700px] `}
+      className={`${style.flexStart} flex-col lg:px-0 sm:px-16  px-4 gap-4 h-[700px]`}
     >
       <div className="">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
-          className="flex flex-col items-center mb-12 "
+          className="flex flex-col items-center mb-12"
         >
           <h1 className={`${style.heading}`}>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-red-700">
@@ -61,7 +61,7 @@ const Hero = () => (
       data-aos="fade-down-left"
       className={`flex-col flex ${style.flexCenter} pt-10 md:my-0 relative hidden md:block`}
     >
-      <div className={` flex-1 flex ${style.flexCenter} md:my-0 my relative`}>
+      <div className={`flex-1 flex ${style.flexCenter} md:my-0 my relative`}>
         <Image
           src={photo}
           alt="photo"
@@ -69,13 +69,13 @@ const Hero = () => (
         />
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 " />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60" />
 
       <div className="relative bottom-24 left-28">
         <div>
           <h3 className="text-xl font-paragraph text-dimWhite">
             Based in
-            <span className="block bg-primary  bg-clip-text text-transparent ">
+            <span className="block bg-primary bg-clip-text text-transparent">
               Mozambique / Maputo
             </span>
           </h3>
