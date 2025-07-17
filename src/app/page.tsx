@@ -1,15 +1,8 @@
 "use client";
+import Contact from "@/componets/Contact";
 import styles from "../app/style";
 
-import {
-  Navbar,
-  Hero,
-  Abaut,
-  Skills,
-  Projects,
-  //Contact,
-  Footer,
-} from "../componets";
+import { Navbar, Hero, Abaut, Skills, Footer } from "../componets";
 
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -41,7 +34,7 @@ const page = () => (
 
       <div className={`bg-black ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          <Hero /> <Abaut /> <Skills /> <Projects />
+          <Hero /> <Abaut /> <Skills /> <Contact />
         </div>
       </div>
 
