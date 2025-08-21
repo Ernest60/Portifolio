@@ -9,77 +9,75 @@ import { motion } from "motion/react";
 const Hero = () => (
   <section
     id="home"
-    className={`${(style.paddingY, style.paddingX)} pt-30 flex items-center gap-10`}
+    className={`${style.paddingY}, ${style.paddingX} flex items-center justify-between gap-10`}
   >
     <div
       data-aos="fade-right"
-      className={`${style.flexStart} flex-col lg:px-0 sm:px-16  px-4 gap-4 h-[700px]`}
+      className={`flex flex-col px-4 mb-4 gap-5 lg:px-0`}
     >
-      <div className="">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
-          className="flex flex-col items-center mb-12"
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9 }}
+        className="flex flex-col items-center md:w-[250px]"
+      >
+        <h1
+          className={`font-title w-full text-[40px] mt-15 text-dimWhite sm:leading-[76.8px] leading-[60.8px]`}
         >
-          <h1 className={`${style.heading}`}>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-red-700">
-              {" "}
-              Hello, I'm{" "}
-            </span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-red-700">
+            {" "}
+            Hello, I'm{" "}
+          </span>
 
-            <br />
+          <br />
 
-            <TypeAnimation
-              sequence={["Ernesto", 1000, "Web Developer", 1000]}
-              wrapper="span"
-              speed={5}
-              repeat={Infinity}
-            />
-          </h1>
-        </motion.div>
+          <TypeAnimation
+            sequence={["Ernesto", 1000, "Web Developer", 1000]}
+            wrapper="span"
+            speed={5}
+            repeat={Infinity}
+          />
+        </h1>
+      </motion.div>
 
-        <div>
-          <p className={`${style.paragraph} max-w-[470px]`}>
-            Specialising in React.js and Next.js, creating modern websites and
-            apps with effective digital experiences, helping companies and
-            individuals to establish a solid and functional online presence.
-          </p>
-        </div>
-      </div>
+      <p
+        className={`${style.paragraph} max-w-[500px] md:max-w-[300px] lg:max-w-[550px]`}
+      >
+        Specialising in React.js and Next.js, creating modern websites and apps
+        with effective digital experiences, helping companies and individuals to
+        establish a solid and functional online presence.
+      </p>
 
       <Button />
     </div>
 
     <motion.div
-      animate={{ y: [0, -40, 0] }}
+      animate={{ y: [0, -70, 0] }}
       transition={{
         duration: 4,
         repeat: Infinity,
         ease: "easeInOut",
       }}
       data-aos="fade-down-left"
-      className={`flex-col flex ${style.flexCenter} pt-10 md:my-0 relative hidden md:block`}
+      className={`${style.flexCenter} flex-col mt-05 relative hidden md:mt-14 md:flex`}
     >
-      <div className={`flex-1 flex ${style.flexCenter} md:my-0 my relative`}>
+      <div className={`${style.flexCenter} flex-1 relative`}>
         <Image
           src={photo}
           alt="photo"
-          className="w-[450px] h-[500px] relative rounded-b-3xl"
+          className="rounded-b-3xl md:w-[400px] md:h-[500px]"
         />
       </div>
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/60" />
 
-      <div className="relative bottom-24 left-28">
-        <div>
-          <h3 className="text-xl font-paragraph text-dimWhite">
-            Based in
-            <span className="block bg-primary bg-clip-text text-transparent">
-              Mozambique / Maputo
-            </span>
-          </h3>
-        </div>
+      <div className="relative bottom-8 right-20 md:hidden lg:flex">
+        <h3 className="text-xl font-paragraph text-dimWhite">
+          Based in
+          <span className="block bg-primary bg-clip-text text-transparent">
+            Mozambique / Maputo
+          </span>
+        </h3>
       </div>
     </motion.div>
   </section>

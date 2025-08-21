@@ -1,9 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { div, h1, h2, i } from "motion/react-client";
 import style from "@/app/style";
-import { projectDate } from "../constants";
 import { react, next, ts, tailwind, arrowUp } from "@/assets";
 import Link from "next/link";
 
@@ -13,23 +11,25 @@ const ProjectCards = ({ description, title, img, on }) => (
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{ y: -20, transition: { duration: 0.2 } }}
-      className="flex justify-between flex-col h-[500px] w-[380px] bg-[#1a1a1a] border overflow-hidden border-white/10 rounded-3xl"
+      className="flex justify-between flex-col h-[380px] w-[250px] bg-[#1a1a1a] overflow-hidden border-white/10 rounded-3xl lg:h-[400px] lg:w-[300px]"
     >
       <motion.div
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.2 }}
         className="h-[250px] relative"
       >
-        <Image src={img} alt="name" className="h-[300px]" />
+        <Image src={img} alt="name" className="h-[150px] w-full" />
       </motion.div>
 
-      <motion.div className="flex flex-col rounded-xl gap-2 py-16">
-        <div className=" mx-4 ">
+      <motion.div className="flex flex-col rounded-xl gap-2 py-10">
+        <div className="mx-4">
           {" "}
-          <h3 className="font-title text-xl font-bold text-dimWhite mb-2">
+          <h3 className="font-title text-[15px] font-bold text-dimWhite mb-2">
             {title}
           </h3>
-          <p className={`${style.paragraph}`}>{description}</p>
+          <p className={`font-paragraph text-sm text-dimWhite mb-2 `}>
+            {description}
+          </p>
         </div>
 
         <div className="flex gap-4 mx-4">
@@ -59,12 +59,12 @@ const ProjectCards = ({ description, title, img, on }) => (
           <Link
             href={on}
             target={"_blank"}
-            className="flex gap-16 font-serif text-base text-[9px] text-dimWhite"
+            className="flex gap-16 font-serif  text-sm text-dimWhite"
           >
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
-              className="h-[250px] relative flex flex-row gap-8"
+              className="h-[150px] relative flex flex-row gap-8"
             >
               {on}
               <div>

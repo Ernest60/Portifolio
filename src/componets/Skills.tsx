@@ -19,7 +19,7 @@ const Skill = () => {
             transition={{ duration: 0.9 }}
             className="flex flex-col items-center"
           >
-            <h1 className={`{${style.heading}}`}>
+            <h1 className={`${style.heading}`}>
               Skills{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
                 {" "}
@@ -29,7 +29,7 @@ const Skill = () => {
             </h1>
           </motion.div>
 
-          <p className={`${style.paragraph}`}>
+          <p className={`${style.paragraph} text-dimWhite px-3`}>
             Using the latest tech this world has to offer
           </p>
         </div>
@@ -41,7 +41,7 @@ const Skill = () => {
             delay: 0,
             disableOnInteraction: false,
           }}
-          speed={5000}
+          speed={9000}
           modules={[Autoplay]}
           className="max-w-[90%]"
         >
@@ -49,12 +49,12 @@ const Skill = () => {
             <SwiperSlide>
               <div
                 key={skill.id}
-                className={`${style.flexCenter} flex-1 sm:min-w-[190px] min-w-[220px]`}
+                className={`${style.flexCenter} flex-1 min-w-[220px]`}
               >
                 <Image
                   src={skill.logo}
                   alt="skill"
-                  className="w-[70px] h-[50px] object-contain"
+                  className="w-[40px] h-[50px] object-contain lg:w-[80px] lg:h-[90px]"
                 />
               </div>
             </SwiperSlide>
@@ -69,7 +69,7 @@ const Skill = () => {
             disableOnInteraction: false,
             reverseDirection: true,
           }}
-          speed={5000}
+          speed={9000}
           modules={[Autoplay]}
           className="max-w-[90%] "
         >
@@ -77,12 +77,12 @@ const Skill = () => {
             <SwiperSlide>
               <div
                 key={skill.id}
-                className={` ${style.flexCenter} flex-1 sm:min-w-[192px] min-w-[120px]`}
+                className={` ${style.flexCenter} flex-1 min-w-[192px]`}
               >
                 <Image
                   src={skill.logo}
                   alt="skill"
-                  className="w-[70px] h-[50px] object-contain"
+                  className="w-[40px] h-[30px] object-contain lg:w-[80px] lg:h-[90px]"
                 />
               </div>
             </SwiperSlide>

@@ -47,23 +47,24 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className={`${style.paddingX} relative bg-gradient-to-r from-[#000b1d] to-[#0a1226] gap-2 py-5`}
+      className={`${style.paddingX} relative bg-gradient-to-r from-[#000b1d] to-[#0a1226] gap-2`}
     >
       <div className="flex flex-col justify-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
-          className="flex flex-col items-center"
+          className="flex flex-col text-center"
         >
-          <h1 className="font-serif text-dimWhite text-[40px]">Contact</h1>
+          <h1 className={`${style.heading}`}>Contact</h1>
         </motion.div>
 
-        <div className={`${layout.sectionReverse}`}>
+        <div className={`${layout.sectionReverse} px-6 gap-10 lg:gap-10`}>
+
           <div className="flex flex-col gap-5">
             <h1 className="text-dimWhite font-bold">Let's Connect</h1>
 
-            <p className={`${style.paragraph} max-w-[650px]`}>
+            <p className={`${style.paragraph} max-w-[500px]`}>
               I'm currently aveliable to take on new projects, so my inbox is
               aways open. Whether you have a question or just want to say hi,
               I'll try my best to get back to you!
@@ -71,7 +72,7 @@ const Contact = () => {
 
             <div className="flex gap-2 text-dimWhite">
               <Image src={email} alt="img" className="w-5 h-5" />
-              <p className="font-roboto text-[14px]">emandlate4@gmail.com</p>
+              <p className="font-roboto text-[12px]">emandlate4@gmail.com</p>
             </div>
 
             <div className="flex gap-2 text-dimWhite">
@@ -85,7 +86,7 @@ const Contact = () => {
             </div>
 
             {/*SOCIALMEDIA */}
-            <div className="sm:flex flex-row items-center px-2 pt">
+            <div className="flex flex-row items-center px-2">
               {socialMedia.map((social, index) => (
                 <Image
                   key={social.id}
@@ -101,13 +102,13 @@ const Contact = () => {
 
           <form
             id="form"
-            className={`flex flex-col relative gap-5`}
+            className={`flex flex-col relative gap-5 px-10m lg:min-w-[500px]`}
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col gap-1">
               <label
                 htmlFor=""
-                className="text-dimWhite text-[15px] font-serif"
+                className="text-dimWhite text-[17px] font-paragraph"
               >
                 Your Name
               </label>
@@ -119,14 +120,14 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className=" w-full h-8 px-3 py-2 text-sm text-black placeholder-gray-300 bg-white border-none rounded shadow"
+                className=" w-full h-8 px-3 py-2 text-[14px] text-black placeholder-gray-300 bg-white rounded shadow"
               />
             </div>
 
             <div className="">
               <label
                 htmlFor=""
-                className="text-dimWhite text-[15px] font-serif"
+                className="text-dimWhite text-[17px] font-paragraph "
               >
                 Enter your email
               </label>
@@ -138,14 +139,14 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full h-8 px-3 py-2 text-black text-sm rounded-md placeholder-gray-300 bg-white border-none"
+                className="w-full h-8 px-3 py-2 text-black text-[14px] rounded-md placeholder-gray-300 bg-white border-none"
               />
             </div>
 
             <div className="">
               <label
                 htmlFor=""
-                className="text-dimWhite text-[15px] font-serif"
+                className="text-dimWhite text-[17px] font-paragraph"
               >
                 Writr your message here
               </label>
@@ -155,8 +156,8 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                rows={5}
-                className="w-full px-3 py-2 text-black text-sm placeholder-gray-300 bg-white border-none rounded-sm shadow"
+                rows={8}
+                className="w-full px-3 py-2 text-black text-[14px] placeholder-gray-300 bg-white border-none rounded-sm shadow"
               ></textarea>
             </div>
 

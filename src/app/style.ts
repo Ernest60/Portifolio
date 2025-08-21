@@ -2,9 +2,9 @@ const style = {
   boxWidth: "lg:max-w-[1280px] w-full",
 
   heading:
-    "font-Cardo sm:text-[48px] text-[40px] text-dimWhite sm:leading-[76.8px] leading-[60.8px] w-full",
+    "font-title text-[25px] text-dimWhite leading-[60.8px] text-dimWhite w-full lg:text-[40px]",
   paragraph:
-    "font-PT_Serif text-base text-dimWhite text-[17px] leading-[30.8px]",
+    "font-paragraph text-sm mb-3 leading-relaxed text-dimWhite md:text[18px] lg:text-xl",
 
   flexCenter: "flex justify-center items-center",
   flexStart: "flex justify-center items-start",

@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { menu, close } from "@/assets";
-import { div, p } from "framer-motion/client";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -16,52 +15,52 @@ const Navbar = () => {
         <div className="relative h-12 w-12 mr-2 rounded-full overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-primary to-tertiary animate-spin">
             <div className="absolute inset-[2px] bg-background rounded-full flex items-center justify-center">
-              <span className="font-title text-2xl font-bold bg-gradient-to-r from-primary to-tertiary bg-clip-text text-transparent">
+              <span className="font-title text-xl font-bold bg-gradient-to-r from-primary to-tertiary bg-clip-text text-transparent">
                 EM
               </span>
             </div>
           </div>
         </div>
-        <span className="font-title text-xl sm:hidden md:block text-dimWhite hover:text-primary">
+        <span className="font-title text-xl text-dimWhite hover:text-primary">
           Ernesto Mandlate
         </span>
       </div>
 
-      <div>
-        <ul className="bg-slate-600 px-6 py-3 rounded-full border-white/5 list-none hidden justify-end items-center flex-1 sm:flex">
+      <div className="hidden justify-center items-center gap-10 lg:flex">
+        <ul className="bg-slate-600/25 px-6 py-2 rounded-full border-white/5 flex">
           {navLinks.map((nav, index) => (
             <motion.li
               whileHover={{ scale: 1.05 }}
               key={nav.id}
-              className={`font-paragraph font-normal cursor-pointer text-[22px] ${
+              className={`font-paragraph font-normal cursor-pointer text-xl hover:text-primary ${
                 index === navLinks.length - 1 ? "mr-0" : "mr-8"
-              } text-dimWhite hover:text-primary`}
+              } text-dimWhite `}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
             </motion.li>
           ))}
         </ul>
-      </div>
 
-      <div className="hidden h-6 w-px bg-white/20 mx-2 md:flex"></div>
+        <div className="hidden h-6 w-px bg-white/20 mx-2 md:flex"></div>
 
-      {/*SOCIALMEDIA */}
-      <div className="flex-row">
-        {socialMedia.map((social, index) => (
-          <Link href={social.link} key={social.id} target={"_blank"}>
-            <Image
-              src={social.icon}
-              alt={social.link}
-              className={`w-[21px] h-[21px] object-contain cursor-pointer rounded-sm hover:scale-110 hidden sm:flex ${
-                index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
-              }`}
-            />
-          </Link>
-        ))}
+        {/*SOCIALMEDIA */}
+        <div className="flex flex-row">
+          {socialMedia.map((social, index) => (
+            <Link href={social.link} key={social.id} target={"_blank"}>
+              <Image
+                src={social.icon}
+                alt={social.link}
+                className={`w-[21px] h-[21px] object-contain cursor-pointer rounded-sm hover:scale-110 hidden md:flex ${
+                  index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
+                }`}
+              />
+            </Link>
+          ))}
+        </div>
       </div>
 
       {/*MOBILE*/}
-      <div className="flex flex-1 justify-end items-center cursor-pointer sm:hidden">
+      <div className="flex flex-1 justify-end cursor-pointer lg:hidden">
         <Image
           src={toggle ? close : menu}
           alt="menu"
@@ -74,7 +73,7 @@ const Navbar = () => {
             toggle ? "flex" : "hidden"
           } flex-col items-center gap-3 p-6 bg-gray-950/30 absolute top-16 right-0 mx-1 my-3 min-w-[150px] rounded-xl`}
         >
-          <ul className="list-none flex flex-col justify-end items-center flex-1">
+          <ul className="flex flex-col justify-end items-center flex-1">
             {navLinks.map((nav, index) => (
               <motion.li
                 whileHover={{ scale: 1.05 }}
@@ -89,7 +88,7 @@ const Navbar = () => {
           </ul>
 
           {/*SOCIALMEDIA */}
-          <div className="sm:flex flex-row items-center ">
+          <div className="sm:flex flex-row items-center">
             {socialMedia.map((social, index) => (
               <Link href={social.link} key={social.id} target={"_blank"}>
                 <Image

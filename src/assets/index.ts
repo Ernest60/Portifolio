@@ -11,10 +11,10 @@ import next from "./next.png";
 import react from "./react.png";
 import tailwind from "./tailwind.png";
 import ts from "./ts.png";
-import project_1 from "./project_1.png";
-import project_2 from "./project_2.png";
-import project_3 from "./project_3.png";
-import project_4 from "./project_4.png";
+import project1 from "./project1.png";
+import project2 from "./project2.png";
+import project3 from "./project3.png";
+import project4 from "./project4.png";
 
 export {
   menu,
@@ -30,8 +30,8 @@ export {
   react,
   tailwind,
   ts,
-  project_1,
-  project_2,
-  project_3,
-  project_4,
+  project1,
+  project2,
+  project3,
+  project4,
 };

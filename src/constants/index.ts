@@ -1,4 +1,3 @@
-import React from "react";
 import {
   linkedin,
   github,
@@ -9,10 +8,10 @@ import {
   react,
   ts,
   next,
-  project_1,
-  project_2,
-  project_3,
-  project_4,
+  project1,
+  project2,
+  project3,
+  project4,
 } from "../assets";
 
 export const navLinks = [
@@ -152,30 +151,31 @@ export const skillData = [
 export const projectDate = [
   {
     id: "projectDate-1",
-    title: "Modern Nextjs Website",
-    description: "Moden shopping experince with Next.Js and Typescript",
-    img: project_1,
-    on: "https://www.google.com",
+    title: "Portfolio",
+    description: "Moden portfolio with Next.Js and Typescript",
+    img: project1,
+    on: "https://portifolio-wje3.vercel.app/",
   },
   {
     id: "projectDate-2",
-    title: "Snowlake Theme",
-    description: "Real time data visualization platform",
-    img: project_2,
-    on: "https://www.google.com",
+    title: "AiDev",
+    description: "Ai landing page with Next.Js and Typescript",
+    img: project2,
+    on: "https://ai-landing-page-navy-eta.vercel.app/",
   },
   {
     id: "projectDate-3",
-    title: "Storage App",
-    description: "Cross-Platform mobile app for health tracking",
-    img: project_3,
-    on: "https://www.google.com",
+    title: "Payment Method App",
+    description: "Cross-Platform of Payment with Next.Js and Typescript",
+    img: project3,
+    on: "https://hoobank-sigma-six.vercel.app/",
   },
+
   {
     id: "projectDate-4",
-    title: "Missio Theme",
-    description: "Lorem ipsum dolor sit Ela",
-    img: project_4,
-    on: "https://www.google.com",
+    title: "Gotravel",
+    description: "Travel landing page with Next.Js and Typescript",
+    img: project4,
+    on: "https://gotravel-h775.vercel.app/",
   },
 ];
